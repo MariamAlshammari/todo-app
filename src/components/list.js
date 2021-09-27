@@ -104,8 +104,9 @@ export default function List(props) {
                     <Card className="listCard"
                     interactive={true}
                     elevation={Elevation.THREE}
-                    key={item.id}>
-        <div key={item.id}>
+                    key={item.id}
+                    >
+        {/* <div key={item.id}> */}
           <p>{item.text}</p>
           <p><small>Assigned to: {item.assignee}</small></p>
           <p><small>Difficulty: {item.difficulty}</small></p>
@@ -113,7 +114,7 @@ export default function List(props) {
               Complete: {item.complete.toString()}
               </Button>
           <hr />
-        </div>
+        {/* </div> */}
 </Card>
       ))}
             </Card>
