@@ -11,7 +11,7 @@ const ToDo = () => {
   const { handleChange, handleSubmit } = useForm(addItem);
 
   function addItem(item) {
-    console.log(item);
+    // console.log(item);
     item.id = uuid();
     item.complete = false;
     setList([...list, item]);
@@ -25,6 +25,7 @@ const ToDo = () => {
   function toggleComplete(id) {
 
     const items = list.map( item => {
+      
       if ( item.id == id ) {
         item.complete = ! item.complete;
       }
